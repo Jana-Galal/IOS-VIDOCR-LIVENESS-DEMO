@@ -1,0 +1,601 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.9.2 (swiftlang-5.9.2.2.56 clang-1500.1.0.2.5)
+// swift-module-flags: -target arm64-apple-ios12.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name VIDVOCR
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import AVFoundation
+import CommonCrypto
+import CoreData
+import CoreLocation
+import CoreMotion
+import CryptoKit
+import DeveloperToolsSupport
+import Foundation
+import ImageIO
+import Metal
+import Security
+import Swift
+import SwiftUI
+import SystemConfiguration
+import UIKit
+import Vision
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+@_hasMissingDesignatedInitializers public class API {
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class Alert {
+  public static func show(alertTitle: Swift.String, alertBody: Swift.String, actionTitle: Swift.String, cancelTitle: Swift.String, actionComplition: @escaping () -> Swift.Void, cancelComplition: @escaping () -> Swift.Void)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class VIDVEvent : Swift.Codable {
+  public var key: Swift.String?
+  public var screen: Swift.String?
+  public var type: Swift.String?
+  public var sessionId: Swift.String?
+  public var payload: Swift.String?
+  public var timestamp: Swift.Int64?
+  public var date: Foundation.Date?
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
+@_hasMissingDesignatedInitializers public class VIDVError : Swift.Codable {
+  public var code: Swift.Int16?
+  public var message: Swift.String?
+  public var screen: Swift.String?
+  public var type: Swift.String?
+  public var sessionId: Swift.String?
+  public var timestamp: Swift.Int64?
+  public var date: Foundation.Date?
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
+public class OCRBuilder {
+  public init()
+  public func setlLanguage(_ language: Swift.String) -> VIDVOCR.OCRBuilder
+  public func setPrimaryColor(_ color: UIKit.UIColor) -> VIDVOCR.OCRBuilder
+  public func setDocumentVerification(_ verify: Swift.Bool) -> VIDVOCR.OCRBuilder
+  @available(*, deprecated, message: "This function is deprecated and will be removed in future versions.")
+  public func setDataValidation(_ validate: Swift.Bool) -> VIDVOCR.OCRBuilder
+  public func setReviewData(_ review: Swift.Bool) -> VIDVOCR.OCRBuilder
+  public func setManualCaptureMode(_ manualCaptureMode: Swift.Bool) -> VIDVOCR.OCRBuilder
+  public func setBaseUrl(_ baseUrl: Swift.String) -> VIDVOCR.OCRBuilder
+  public func setBundleKey(_ bundleKey: Swift.String) -> VIDVOCR.OCRBuilder
+  public func setAccessToken(_ token: Swift.String) -> VIDVOCR.OCRBuilder
+  public func setHeaders(_ headers: [Swift.String : Swift.String]) -> VIDVOCR.OCRBuilder
+  public func setSSLCertificate(_ certificate: Foundation.Data) -> VIDVOCR.OCRBuilder
+  public func setLogsDelegate(_ delegate: any VIDVOCR.VIDVLogsDelegate) -> VIDVOCR.OCRBuilder
+  public func setCaptureOnlyMode(_ captureOnly: Swift.Bool) -> VIDVOCR.OCRBuilder
+  public func setPreviewCapturedImage(_ preview: Swift.Bool) -> VIDVOCR.OCRBuilder
+  public func setCollectUserInfo(_ collectUserInfo: Swift.Bool) -> VIDVOCR.OCRBuilder
+  @available(*, deprecated, message: "This function is deprecated and will be removed in future versions.")
+  public func setReturnValidationError(_ returnValidationError: Swift.Bool) -> VIDVOCR.OCRBuilder
+  public func setLogo(_ customLogo: UIKit.UIImage) -> VIDVOCR.OCRBuilder
+  public func setDocumentVerificationPlus(_ documentVerificationPlus: Swift.Bool) -> VIDVOCR.OCRBuilder
+  public func setAdvancedConfidence(_ advancedConfidence: Swift.Bool) -> VIDVOCR.OCRBuilder
+  public func setProfessionAnalysis(_ professionAnalysis: Swift.Bool) -> VIDVOCR.OCRBuilder
+  public func start(vc: UIKit.UIViewController, ocrDelegate: any VIDVOCR.VIDVOCRDelegate)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class ColorsHelper {
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class CoreDataManager {
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc(VIDVErrorLogEntity) public class VIDVErrorLogEntity : CoreData.NSManagedObject {
+  @objc override dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  @objc deinit
+}
+extension VIDVOCR.VIDVErrorLogEntity {
+  @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<VIDVOCR.VIDVErrorLogEntity>
+  @objc @NSManaged dynamic public var code: Swift.Int16 {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var message: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var date: Foundation.Date? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var timestamp: Swift.Int64 {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var screen: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var type: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var session: VIDVOCR.VIDVSessionEntity? {
+    @objc get
+    @objc set
+  }
+}
+@_inheritsConvenienceInitializers @objc(VIDVEventsLogEntity) public class VIDVEventsLogEntity : CoreData.NSManagedObject {
+  @objc override dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  @objc deinit
+}
+extension VIDVOCR.VIDVEventsLogEntity {
+  @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<VIDVOCR.VIDVEventsLogEntity>
+  @objc @NSManaged dynamic public var key: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var type: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var timestamp: Swift.Int64 {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var date: Foundation.Date? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var screen: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var payload: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var session: VIDVOCR.VIDVSessionEntity? {
+    @objc get
+    @objc set
+  }
+}
+extension UIKit.UIImage {
+  public class func gifImageWithData(_ data: Foundation.Data) -> UIKit.UIImage?
+  public class func gifImageWithURL(_ gifUrl: Swift.String) -> UIKit.UIImage?
+  public class func gifImageWithName(_ name: Swift.String) -> UIKit.UIImage?
+}
+public protocol VIDVOCRDelegate : AnyObject {
+  func onOCRResult(result: VIDVOCR.VIDVOCRResponse)
+}
+public protocol VIDVLogsDelegate : AnyObject {
+  func onOCRLog(log: VIDVOCR.VIDVError)
+  func onOCRLog(log: VIDVOCR.VIDVEvent)
+}
+public enum VIDVOCRResponse {
+  case success(data: VIDVOCR.VIDVOCRResult?)
+  case builderError(code: Swift.Int, message: Swift.String)
+  case serviceFailure(code: Swift.Int, message: Swift.String, data: VIDVOCR.VIDVOCRResult?)
+  case userExit(step: Swift.String, data: VIDVOCR.VIDVOCRResult?)
+  case capturedImages(capturedImageData: VIDVOCR.CapturedImageData)
+}
+@_hasMissingDesignatedInitializers public class CapturedImageData : Swift.Codable {
+  public var nationalIDLabel: Swift.String?
+  public var nationalIdImage: Swift.String?
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
+public enum VIDVScans {
+  case singleScan
+  case multipleScans
+  public static func == (a: VIDVOCR.VIDVScans, b: VIDVOCR.VIDVScans) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers public class Reachability {
+  @objc deinit
+}
+public enum KeychainItemAccessibility {
+  @available(iOS 4, *)
+  case afterFirstUnlock
+  @available(iOS 4, *)
+  case afterFirstUnlockThisDeviceOnly
+  @available(iOS 4, *)
+  case always
+  @available(iOS 8, *)
+  case whenPasscodeSetThisDeviceOnly
+  @available(iOS 4, *)
+  case alwaysThisDeviceOnly
+  @available(iOS 4, *)
+  case whenUnlocked
+  @available(iOS 4, *)
+  case whenUnlockedThisDeviceOnly
+  public static func == (a: VIDVOCR.KeychainItemAccessibility, b: VIDVOCR.KeychainItemAccessibility) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+open class KeychainWrapper {
+  @available(*, deprecated, message: "KeychainWrapper.defaultKeychainWrapper is deprecated, use KeychainWrapper.standard instead")
+  public static let defaultKeychainWrapper: VIDVOCR.KeychainWrapper?
+  public var serviceName: Swift.String {
+    get
+  }
+  public var accessGroup: Swift.String? {
+    get
+  }
+  public init(serviceName: Swift.String, accessGroup: Swift.String? = nil)
+  open func hasValue(forKey key: Swift.String, withAccessibility accessibility: VIDVOCR.KeychainItemAccessibility? = nil) -> Swift.Bool
+  open func accessibilityOfKey(_ key: Swift.String) -> VIDVOCR.KeychainItemAccessibility?
+  open func allKeys() -> Swift.Set<Swift.String>
+  open func integer(forKey key: Swift.String, withAccessibility accessibility: VIDVOCR.KeychainItemAccessibility? = nil) -> Swift.Int?
+  open func float(forKey key: Swift.String, withAccessibility accessibility: VIDVOCR.KeychainItemAccessibility? = nil) -> Swift.Float?
+  open func double(forKey key: Swift.String, withAccessibility accessibility: VIDVOCR.KeychainItemAccessibility? = nil) -> Swift.Double?
+  open func bool(forKey key: Swift.String, withAccessibility accessibility: VIDVOCR.KeychainItemAccessibility? = nil) -> Swift.Bool?
+  open func string(forKey key: Swift.String, withAccessibility accessibility: VIDVOCR.KeychainItemAccessibility? = nil) -> Swift.String?
+  open func object(forKey key: Swift.String, withAccessibility accessibility: VIDVOCR.KeychainItemAccessibility? = nil) -> (any Foundation.NSCoding)?
+  open func data(forKey key: Swift.String, withAccessibility accessibility: VIDVOCR.KeychainItemAccessibility? = nil) -> Foundation.Data?
+  open func dataRef(forKey key: Swift.String, withAccessibility accessibility: VIDVOCR.KeychainItemAccessibility? = nil) -> Foundation.Data?
+  @discardableResult
+  open func set(_ value: Swift.Int, forKey key: Swift.String, withAccessibility accessibility: VIDVOCR.KeychainItemAccessibility? = nil) -> Swift.Bool
+  @discardableResult
+  open func set(_ value: Swift.Float, forKey key: Swift.String, withAccessibility accessibility: VIDVOCR.KeychainItemAccessibility? = nil) -> Swift.Bool
+  @discardableResult
+  open func set(_ value: Swift.Double, forKey key: Swift.String, withAccessibility accessibility: VIDVOCR.KeychainItemAccessibility? = nil) -> Swift.Bool
+  @discardableResult
+  open func set(_ value: Swift.Bool, forKey key: Swift.String, withAccessibility accessibility: VIDVOCR.KeychainItemAccessibility? = nil) -> Swift.Bool
+  @discardableResult
+  open func set(_ value: Swift.String, forKey key: Swift.String, withAccessibility accessibility: VIDVOCR.KeychainItemAccessibility? = nil) -> Swift.Bool
+  @discardableResult
+  open func set(_ value: any Foundation.NSCoding, forKey key: Swift.String, withAccessibility accessibility: VIDVOCR.KeychainItemAccessibility? = nil) -> Swift.Bool
+  @discardableResult
+  open func set(_ value: Foundation.Data, forKey key: Swift.String, withAccessibility accessibility: VIDVOCR.KeychainItemAccessibility? = nil) -> Swift.Bool
+  @available(*, deprecated, message: "remove is deprecated, use removeObject instead")
+  @discardableResult
+  open func remove(key: Swift.String, withAccessibility accessibility: VIDVOCR.KeychainItemAccessibility? = nil) -> Swift.Bool
+  @discardableResult
+  open func removeObject(forKey key: Swift.String, withAccessibility accessibility: VIDVOCR.KeychainItemAccessibility? = nil) -> Swift.Bool
+  open func removeAllKeys() -> Swift.Bool
+  open class func wipeKeychain()
+  @objc deinit
+}
+public enum HTTPMethod : Swift.String {
+  case post
+  case get
+  case put
+  case delete
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum ContentType : Swift.String {
+  case normal
+  case media
+  case encoding
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers public class NetworkHelper {
+  public func body(parameters: [Swift.String : Any]) -> Foundation.Data?
+  public func body<T>(parameters: T) -> Foundation.Data? where T : Swift.Decodable, T : Swift.Encodable
+  public func decodeData<T>(data: Foundation.Data, fromModel: T.Type, completion: @escaping (T?) -> Swift.Void) where T : Swift.Decodable, T : Swift.Encodable
+  @objc deinit
+}
+public typealias Handler<T> = (_ response: T?, _ rawResponse: Swift.String?, _ hmac: Swift.String?, _ requestKey: [Swift.UInt8]?, _ responseKey: [Swift.UInt8]?, _ error: Swift.String?) -> Swift.Void
+public typealias ErrorHandler<E> = (_ response: E?, _ statusCode: Swift.Int?) -> Swift.Void
+public typealias RequestHandler = (_ data: Foundation.Data?, _ response: Foundation.URLResponse?, _ error: (any Swift.Error)?) -> Swift.Void
+public class AdvancedConfidence : Swift.Codable {
+  required public init(from decoder: any Swift.Decoder) throws
+  public var fraudDetectionZone: Swift.Int?
+  public var fraudDetectionDetails: VIDVOCR.FraudDetectionDetails?
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+public class FraudDetectionDetails : Swift.Codable {
+  public var faceFraudZone: Swift.Int?
+  public var faceFraudConfidence: Swift.Double?
+  public var frontImageManipulationZone: Swift.Int?
+  public var frontImageManipulationConfidence: Swift.Double?
+  required public init(from decoder: any Swift.Decoder) throws
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+public class DocumentVerificationPlus : Swift.Codable {
+  public var expired: Swift.Bool?
+  public var frontDataValidity: Swift.Bool?
+  public var backDataValidity: Swift.Bool?
+  public var isFrontGreyscale: Swift.Bool?
+  public var isBackGreyscale: Swift.Bool?
+  public var reviewRequired: [Swift.String]?
+  required public init(from decoder: any Swift.Decoder) throws
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+public class ProfessionAnalysis : Swift.Codable {
+  public var professionCategorization: Swift.String?
+  public var workplace: Swift.String?
+  required public init(from decoder: any Swift.Decoder) throws
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+public class Captures : Swift.Codable {
+  public var nationalIdFront: Swift.String?
+  public var nationalIdBack: Swift.String?
+  public init(nationalIdFront: Swift.String?, nationalIdBack: Swift.String?)
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
+public struct VIDVOCRData : Swift.Codable {
+  public var firstName: Swift.String?
+  public var fullName: Swift.String?
+  public var religion: Swift.String?
+  public var gender: Swift.String?
+  public var dateOfBirth: Swift.String?
+  public var maritalStatus: Swift.String?
+  public var husbandName: Swift.String?
+  public var street: Swift.String?
+  public var profession: Swift.String?
+  public var releaseDate: Swift.String?
+  public var expiryDate: Swift.String?
+  public var frontNid: Swift.String?
+  public var backNid: Swift.String?
+  public var serialNumber: Swift.String?
+  public var age: Swift.Int?
+  public var isRootOfTrustCompatible: Swift.Bool?
+  public var transactionIdFront: Swift.String?
+  public var transactionIdBack: Swift.String?
+  public var combinationID: Swift.Int?
+  public var governorate: Swift.String?
+  public var policeStation: Swift.String?
+  public var birthGovernorate: Swift.String?
+  public var advancedConfidence: VIDVOCR.AdvancedConfidence?
+  public var documentVerificationPlus: VIDVOCR.DocumentVerificationPlus?
+  public var professionAnalysis: VIDVOCR.ProfessionAnalysis?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public class VIDVOCRResult : Swift.Codable {
+  public var ocrResult: VIDVOCR.VIDVOCRData?
+  public var captures: VIDVOCR.Captures?
+  public var documentVerificationResult: VIDVOCR.DocumentVerificationResult?
+  public var sessionID: Swift.String?
+  public var hmacDataList: [VIDVOCR.HMACData]?
+  public var decryptionKeys: VIDVOCR.VIDVDecryptionKeys?
+  public init(ocrResult: VIDVOCR.VIDVOCRData?, captures: VIDVOCR.Captures?, watermarkResult: VIDVOCR.DocumentVerificationResult?, sessionID: Swift.String?, hmacDataList: [VIDVOCR.HMACData]?, decryptionKeys: VIDVOCR.VIDVDecryptionKeys?)
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
+public class VIDVDecryptionKeys : Swift.Codable {
+  public var nationalIdFrontRequestKey: [Swift.UInt8]?
+  public var nationalIdBackRequestKey: [Swift.UInt8]?
+  public var combineResponseKey: [Swift.UInt8]?
+  public init(nationalIdFrontRequestKey: [Swift.UInt8]? = nil, nationalIdBackRequestKey: [Swift.UInt8]? = nil, combineResponseKey: [Swift.UInt8]? = nil)
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
+public class HMACData : Swift.Codable {
+  public var serviceID: Swift.String?
+  public var hmacDigest: Swift.String?
+  public var rawResponse: Swift.String?
+  public init(serviceID: Swift.String?, hmacDigest: Swift.String?, rawResponse: Swift.String?)
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
+public class DocumentVerificationResult : Swift.Codable {
+  public var success: Swift.Bool?
+  public init(success: Swift.Bool?)
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
+@_hasMissingDesignatedInitializers public class OCRResult : Swift.Codable {
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
+@_hasMissingDesignatedInitializers public class ValifyOCRData {
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class OCRField : Swift.Codable {
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
+@_hasMissingDesignatedInitializers public class UpdateOCRResult : Swift.Codable {
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
+@_hasMissingDesignatedInitializers public class Logo : Swift.Codable {
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
+extension UIKit.UIFont {
+  public static func jbs_registerFont(withFilenameString filenameString: Swift.String, bundle: Foundation.Bundle?)
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class SDKFlow : VIDVOCR.SDKResults {
+  public var appViewController: UIKit.UIViewController?
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class SDKResults {
+  weak public var delegate: (any VIDVOCR.VIDVOCRDelegate)?
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc(VIDVSessionEntity) public class VIDVSessionEntity : CoreData.NSManagedObject {
+  @objc override dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  @objc deinit
+}
+extension VIDVOCR.VIDVSessionEntity {
+  @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<VIDVOCR.VIDVSessionEntity>
+  @objc @NSManaged dynamic public var bundleKey: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var service: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var id: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var timestamp: Swift.Int64 {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var events: Foundation.NSSet? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var errors: Foundation.NSSet? {
+    @objc get
+    @objc set
+  }
+}
+extension VIDVOCR.VIDVSessionEntity {
+  @objc(addEventsObject:) @NSManaged dynamic public func addToEvents(_ value: VIDVOCR.VIDVEventsLogEntity)
+  @objc(removeEventsObject:) @NSManaged dynamic public func removeFromEvents(_ value: VIDVOCR.VIDVEventsLogEntity)
+  @objc(addEvents:) @NSManaged dynamic public func addToEvents(_ values: Foundation.NSSet)
+  @objc(removeEvents:) @NSManaged dynamic public func removeFromEvents(_ values: Foundation.NSSet)
+}
+extension VIDVOCR.VIDVSessionEntity {
+  @objc(addErrorsObject:) @NSManaged dynamic public func addToErrors(_ value: VIDVOCR.VIDVErrorLogEntity)
+  @objc(removeErrorsObject:) @NSManaged dynamic public func removeFromErrors(_ value: VIDVOCR.VIDVErrorLogEntity)
+  @objc(addErrors:) @NSManaged dynamic public func addToErrors(_ values: Foundation.NSSet)
+  @objc(removeErrors:) @NSManaged dynamic public func removeFromErrors(_ values: Foundation.NSSet)
+}
+extension UIKit.UIDevice {
+  @_Concurrency.MainActor(unsafe) public static let modelName: Swift.String
+}
+@_hasMissingDesignatedInitializers public class UIUtilities {
+  public static func addShape(withPoints points: [Foundation.NSValue], to view: UIKit.UIView, color: UIKit.UIColor)
+  public static func addShape(withPoints points: [Foundation.NSValue]?, to view: UIKit.UIView, color: UIKit.UIColor)
+  public static func createUIImage(from imageBuffer: CoreVideo.CVImageBuffer, orientation: UIKit.UIImage.Orientation) -> UIKit.UIImage?
+  public static func createUIImage(from imageBuffer: CoreVideo.CVImageBuffer) -> UIKit.UIImage?
+  @objc deinit
+}
+public class ColorsModel : Swift.Codable {
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
+public class Services : Swift.Codable {
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
+public class ValifyLanguage : Swift.Codable {
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class ValifyButton : UIKit.UIButton {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func prepareForInterfaceBuilder()
+  @objc deinit
+}
+extension Swift.String {
+  public func levenshtein(_ other: Swift.String) -> Swift.Int
+}
+@_inheritsConvenienceInitializers @objc(Entity) public class Entity : CoreData.NSManagedObject {
+  @objc override dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  @objc deinit
+}
+extension VIDVOCR.Entity {
+  @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<VIDVOCR.Entity>
+}
+@_inheritsConvenienceInitializers @objc(Assets) public class Assets : CoreData.NSManagedObject {
+  @objc override dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  @objc deinit
+}
+extension VIDVOCR.Assets {
+  @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<VIDVOCR.Assets>
+  @objc @NSManaged dynamic public var asset: Foundation.Data? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var date: Foundation.Date? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var key: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var serviceName: Swift.String? {
+    @objc get
+    @objc set
+  }
+}
+@_inheritsConvenienceInitializers @objc(CodeLogs) public class CodeLogs : CoreData.NSManagedObject {
+  @objc override dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  @objc deinit
+}
+extension VIDVOCR.CodeLogs {
+  @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<VIDVOCR.CodeLogs>
+  @objc @NSManaged dynamic public var fileName: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var functionName: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var line: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var message: Swift.String? {
+    @objc get
+    @objc set
+  }
+}
+@_inheritsConvenienceInitializers @objc(LocalAssets) public class LocalAssets : CoreData.NSManagedObject {
+  @objc override dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  @objc deinit
+}
+extension VIDVOCR.LocalAssets {
+  @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<VIDVOCR.LocalAssets>
+  @objc @NSManaged dynamic public var asset: Foundation.Data? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var date: Foundation.Date? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var key: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var serviceName: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var type: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var url: Swift.String? {
+    @objc get
+    @objc set
+  }
+}
+extension VIDVOCR.VIDVScans : Swift.Equatable {}
+extension VIDVOCR.VIDVScans : Swift.Hashable {}
+extension VIDVOCR.KeychainItemAccessibility : Swift.Equatable {}
+extension VIDVOCR.KeychainItemAccessibility : Swift.Hashable {}
+extension VIDVOCR.HTTPMethod : Swift.Equatable {}
+extension VIDVOCR.HTTPMethod : Swift.Hashable {}
+extension VIDVOCR.HTTPMethod : Swift.RawRepresentable {}
+extension VIDVOCR.ContentType : Swift.Equatable {}
+extension VIDVOCR.ContentType : Swift.Hashable {}
+extension VIDVOCR.ContentType : Swift.RawRepresentable {}

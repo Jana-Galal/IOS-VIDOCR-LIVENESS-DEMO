@@ -1,0 +1,4 @@
+framework module VIDVOCR {
+  header "VIDVOCR-Swift.h"
+  requires objc
+}

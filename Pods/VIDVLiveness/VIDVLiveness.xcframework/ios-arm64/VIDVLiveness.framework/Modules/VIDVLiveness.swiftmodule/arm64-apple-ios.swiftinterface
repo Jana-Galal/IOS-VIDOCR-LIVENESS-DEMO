@@ -1,0 +1,391 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.9.2 (swiftlang-5.9.2.2.56 clang-1500.1.0.2.5)
+// swift-module-flags: -target arm64-apple-ios11.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name VIDVLiveness
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import AVFoundation
+import AudioToolbox
+import CommonCrypto
+import CoreData
+import CoreLocation
+import CryptoKit
+import DeveloperToolsSupport
+import Foundation
+import ImageIO
+import Security
+import Swift
+import SwiftUI
+import SystemConfiguration
+import UIKit
+import Vision
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+extension VIDVLiveness.VIDVLivenessEventsLogEntity {
+  @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<VIDVLiveness.VIDVLivenessEventsLogEntity>
+  @objc @NSManaged dynamic public var key: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var type: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var timestamp: Swift.Int64 {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var date: Foundation.Date? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var screen: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var payload: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var session: VIDVLiveness.VIDVLivenessSessionEntity? {
+    @objc get
+    @objc set
+  }
+}
+public struct RegisterTrialRequest : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct Instruction : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+@_inheritsConvenienceInitializers @objc(VIDVLivenessEventsLogEntity) public class VIDVLivenessEventsLogEntity : CoreData.NSManagedObject {
+  @objc override dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  @objc deinit
+}
+public class VIDVCustomLivenessAssets {
+  public var icons: VIDVLiveness.VIDVCustomLivenessIcons
+  public var colors: VIDVLiveness.VIDVCustomLivenessColors
+  public var strings: VIDVLiveness.VIDVCustomLivenessStrings
+  public var sounds: VIDVLiveness.VIDVCustomLivenessSounds
+  public init()
+  @objc deinit
+}
+public class VIDVCustomLivenessIcons {
+  public var smileFace: UIKit.UIImage?
+  public var closeEyesFace: UIKit.UIImage?
+  public var lookLeftFace: UIKit.UIImage?
+  public var lookRightFace: UIKit.UIImage?
+  public var lookStrightFace: UIKit.UIImage?
+  public init()
+  @objc deinit
+}
+public class VIDVCustomLivenessColors {
+  public var textColor: UIKit.UIColor?
+  public var errorTextColor: UIKit.UIColor?
+  public var errorTextBGColor: UIKit.UIColor?
+  public var errorPrimaryButtonTextColor: UIKit.UIColor?
+  public var errorSecondaryButtonTextColor: UIKit.UIColor?
+  public var errorPrimaryButtonBGColor: UIKit.UIColor?
+  public var errorSecondaryButtonBGColor: UIKit.UIColor?
+  public var instructionBGColor: UIKit.UIColor?
+  public var circleProgressColor: UIKit.UIColor?
+  public var circleProgressTextColor: UIKit.UIColor?
+  public var circleTimerColor: UIKit.UIColor?
+  public var circleTimerTextColor: UIKit.UIColor?
+  public init()
+  @objc deinit
+}
+public class VIDVCustomLivenessSounds {
+  public var lookRightSound: Foundation.URL?
+  public var lookLeftSound: Foundation.URL?
+  public var lookStraightSound: Foundation.URL?
+  public var smileSound: Foundation.URL?
+  public var closeYourEyesSound: Foundation.URL?
+  public var successSound: Foundation.URL?
+  public var failureSound: Foundation.URL?
+  public init()
+  @objc deinit
+}
+public class VIDVCustomLivenessStrings {
+  public var smileFaceText: Swift.String?
+  public var closeEyesFaceText: Swift.String?
+  public var lookRightFaceText: Swift.String?
+  public var lookLeftFaceText: Swift.String?
+  public var lookStrightFaceText: Swift.String?
+  public var errorPrimaryButtonText: Swift.String?
+  public var errorSecondaryButtonText: Swift.String?
+  public init()
+  @objc deinit
+}
+@available(iOS 12.0, *)
+extension UIKit.UIImage {
+  public class func gifImageWithData(_ data: Foundation.Data) -> UIKit.UIImage?
+  public class func gifImageWithURL(_ gifUrl: Swift.String) -> UIKit.UIImage?
+  public class func gifImageWithName(_ name: Swift.String) -> UIKit.UIImage?
+}
+extension UIKit.UIDevice {
+  @_Concurrency.MainActor(unsafe) public static let modelName: Swift.String
+}
+public var screenWidth: CoreFoundation.CGFloat {
+  get
+}
+public var screenHeight: CoreFoundation.CGFloat {
+  get
+}
+@available(iOS 12.0, *)
+extension UIKit.UIFont {
+  public static func jbs_registerFont(withFilenameString filenameString: Swift.String, bundle: Foundation.Bundle)
+}
+@available(iOS 12.0, *)
+public class VIDVLivenessFlow {
+  public init(withSettings settings: VIDVLiveness.VIDVLivenessSettings, fromViewController viewController: UIKit.UIViewController)
+  public func start()
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @available(iOS 12.0, *)
+public class CoreDataManager {
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc(VIDVLivenessErrorLogEntity) public class VIDVLivenessErrorLogEntity : CoreData.NSManagedObject {
+  @objc override dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  @objc deinit
+}
+public class VIDVLivenessResult : Swift.Codable {
+  public var livenessSuccess: Swift.Bool?
+  public var facematchSuccess: Swift.Bool?
+  public var capturedImage: Swift.String?
+  public var facematchTransactionID: Swift.String?
+  public var hmacDataList: [VIDVLiveness.HMACData]?
+  public init(livenessSuccess: Swift.Bool?, facematchSuccess: Swift.Bool?, capturedImage: Swift.String?, facematchTransactionID: Swift.String?, hmacDataList: [VIDVLiveness.HMACData]?)
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
+public class HMACData : Swift.Codable {
+  public var serviceID: Swift.String?
+  public var hmacDigest: Swift.String?
+  public var rawResponse: Swift.String?
+  public init(serviceID: Swift.String?, hmacDigest: Swift.String?, rawResponse: Swift.String?)
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
+public class VIDVDetectedFace : Swift.Codable {
+  public var id: Swift.Int
+  public var action: Swift.String
+  public var faceSample: Swift.String
+  public var status: Swift.Bool
+  public init(id: Swift.Int, action: Swift.String, faceSample: Swift.String, status: Swift.Bool)
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
+@available(iOS 12.0, *)
+extension VIDVLiveness.VIDVLivenessSessionEntity {
+  @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<VIDVLiveness.VIDVLivenessSessionEntity>
+  @objc @NSManaged dynamic public var bundleKey: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var service: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var id: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var timestamp: Swift.Int64 {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var events: Foundation.NSSet? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var errors: Foundation.NSSet? {
+    @objc get
+    @objc set
+  }
+}
+extension VIDVLiveness.VIDVLivenessSessionEntity {
+  @objc(addEventsObject:) @NSManaged dynamic public func addToEvents(_ value: VIDVLiveness.VIDVLivenessEventsLogEntity)
+  @objc(removeEventsObject:) @NSManaged dynamic public func removeFromEvents(_ value: VIDVLiveness.VIDVLivenessEventsLogEntity)
+  @objc(addEvents:) @NSManaged dynamic public func addToEvents(_ values: Foundation.NSSet)
+  @objc(removeEvents:) @NSManaged dynamic public func removeFromEvents(_ values: Foundation.NSSet)
+}
+extension VIDVLiveness.VIDVLivenessSessionEntity {
+  @objc(addErrorsObject:) @NSManaged dynamic public func addToErrors(_ value: VIDVLiveness.VIDVLivenessErrorLogEntity)
+  @objc(removeErrorsObject:) @NSManaged dynamic public func removeFromErrors(_ value: VIDVLiveness.VIDVLivenessErrorLogEntity)
+  @objc(addErrors:) @NSManaged dynamic public func addToErrors(_ values: Foundation.NSSet)
+  @objc(removeErrors:) @NSManaged dynamic public func removeFromErrors(_ values: Foundation.NSSet)
+}
+@_inheritsConvenienceInitializers @objc(VIDVLivenessSessionEntity) public class VIDVLivenessSessionEntity : CoreData.NSManagedObject {
+  @objc override dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  @objc deinit
+}
+public class BuilderValidation {
+  public init()
+  public func validate(VIDVLivenessSettings: VIDVLiveness.VIDVLivenessSettings) throws -> Swift.Bool
+  @objc deinit
+}
+public enum stages {
+  case initialization
+  case terms
+  case ocr
+  case dataUpdating
+  case liveness
+  case faceMatch
+  case otp
+  case rating
+  public static func == (a: VIDVLiveness.stages, b: VIDVLiveness.stages) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum VIDVLivenessLanguage {
+  case arabic
+  case english
+  public static func == (a: VIDVLiveness.VIDVLivenessLanguage, b: VIDVLiveness.VIDVLivenessLanguage) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers @available(iOS 12.0, *)
+public class VIDVCustomLiveness {
+  public static let sharedInstance: VIDVLiveness.VIDVCustomLiveness
+  public var delegate: (any VIDVLiveness.VIDVLivenessDelegate)!
+  public var logsDelegate: (any VIDVLiveness.VIDVLivenessLogsDelegate)?
+  @objc deinit
+}
+public protocol VIDVLivenessDelegate {
+  func onLivenessResult(_ VIDVLivenessResponse: VIDVLiveness.VIDVLivenessResponse)
+}
+public protocol VIDVLivenessLogsDelegate : AnyObject {
+  func onLivenessLog(log: VIDVLiveness.VIDVLivenessError)
+  func onLivenessLog(log: VIDVLiveness.VIDVLivenessEvent)
+}
+public enum VIDVLivenessResponse {
+  case success(VIDVLivenessResult: VIDVLiveness.VIDVLivenessResult)
+  case serviceFailure(VIDVLivenessResult: VIDVLiveness.VIDVLivenessResult?, errorCode: Swift.Int, errorMessage: Swift.String)
+  case builderError(errorCode: Swift.Int, errorMessage: Swift.String)
+  case userExited(VIDVLivenessResult: VIDVLiveness.VIDVLivenessResult?, step: Swift.String)
+  case capturedActions(capturedActions: VIDVLiveness.VIDVDetectedFace)
+}
+@_hasMissingDesignatedInitializers public class UIUtilities {
+  public static func addCircle(atPoint point: CoreFoundation.CGPoint, to view: UIKit.UIView, color: UIKit.UIColor, radius: CoreFoundation.CGFloat)
+  public static func addRectangle(_ rectangle: CoreFoundation.CGRect, to view: UIKit.UIView, color: UIKit.UIColor)
+  public static func addShape(withPoints points: [Foundation.NSValue], to view: UIKit.UIView, color: UIKit.UIColor)
+  public static func imageOrientation(fromDevicePosition devicePosition: AVFoundation.AVCaptureDevice.Position = .back) -> UIKit.UIImage.Orientation
+  public static func imageOrientation(deviceOrientation: UIKit.UIDeviceOrientation, cameraPosition: AVFoundation.AVCaptureDevice.Position) -> UIKit.UIImage.Orientation
+  @objc deinit
+}
+extension VIDVLiveness.VIDVLivenessErrorLogEntity {
+  @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<VIDVLiveness.VIDVLivenessErrorLogEntity>
+  @objc @NSManaged dynamic public var code: Swift.Int16 {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var message: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var date: Foundation.Date? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var timestamp: Swift.Int64 {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var screen: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var type: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var session: VIDVLiveness.VIDVLivenessSessionEntity? {
+    @objc get
+    @objc set
+  }
+}
+@_hasMissingDesignatedInitializers public class VIDVLivenessEvent : Swift.Codable {
+  public var key: Swift.String?
+  public var screen: Swift.String?
+  public var type: Swift.String?
+  public var sessionId: Swift.String?
+  public var payload: Swift.String?
+  public var timestamp: Swift.Int64?
+  public var date: Foundation.Date?
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
+@_hasMissingDesignatedInitializers public class VIDVLivenessError : Swift.Codable {
+  public var code: Swift.Int16?
+  public var message: Swift.String?
+  public var screen: Swift.String?
+  public var type: Swift.String?
+  public var sessionId: Swift.String?
+  public var timestamp: Swift.Int64?
+  public var date: Foundation.Date?
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
+@available(iOS 12.0, *)
+public class VIDVLivenessBuilder {
+  public var settings: VIDVLiveness.VIDVLivenessSettings
+  public init()
+  public func setBundleKey(_ bundleKey: Swift.String) -> VIDVLiveness.VIDVLivenessBuilder
+  public func setAccessToken(_ accessToken: Swift.String) -> VIDVLiveness.VIDVLivenessBuilder
+  public func setBaseURL(_ baseURL: Swift.String) -> VIDVLiveness.VIDVLivenessBuilder
+  public func setLanguage(_ language: Swift.String) -> VIDVLiveness.VIDVLivenessBuilder
+  public func setNumberOfInstructions(_ numberOfInstructions: Swift.Int) -> VIDVLiveness.VIDVLivenessBuilder
+  @available(*, deprecated, message: "This function is deprecated.And will be removed in the future.")
+  public func setFailTrials(_ failTrials: Swift.Int) -> VIDVLiveness.VIDVLivenessBuilder
+  public func setInstructionTimer(_ instructionTimer: Swift.Int) -> VIDVLiveness.VIDVLivenessBuilder
+  public func setFaceMatchImage(_ faceMatchImage: UIKit.UIImage?) -> VIDVLiveness.VIDVLivenessBuilder
+  public func setFrontTransactionID(_ frontTransactionID: Swift.String?) -> VIDVLiveness.VIDVLivenessBuilder
+  public func setLogsDelegate(_ delegate: any VIDVLiveness.VIDVLivenessLogsDelegate) -> VIDVLiveness.VIDVLivenessBuilder
+  public func withoutLookRight() -> VIDVLiveness.VIDVLivenessBuilder
+  public func withoutLookLeft() -> VIDVLiveness.VIDVLivenessBuilder
+  public func withoutSmile() -> VIDVLiveness.VIDVLivenessBuilder
+  public func withoutCloseEyes() -> VIDVLiveness.VIDVLivenessBuilder
+  public func showErrorDialogs(_ showErrorDialogs: Swift.Bool) -> VIDVLiveness.VIDVLivenessBuilder
+  public func setHeaders(_ headers: [Swift.String : Swift.String]) -> VIDVLiveness.VIDVLivenessBuilder
+  public func setSSLCertificate(_ certificate: Foundation.Data) -> VIDVLiveness.VIDVLivenessBuilder
+  public func withoutVoiceOver() -> VIDVLiveness.VIDVLivenessBuilder
+  public func setPrimaryColor(_ primaryColor: UIKit.UIColor) -> VIDVLiveness.VIDVLivenessBuilder
+  public func setCollectUserInfo(_ collectUserInfo: Swift.Bool) -> VIDVLiveness.VIDVLivenessBuilder
+  @available(iOS 12.0, *)
+  public func start(vc: UIKit.UIViewController, livenessDelegate: any VIDVLiveness.VIDVLivenessDelegate)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class VIDVLivenessSettings {
+  @objc deinit
+}
+public enum livenessInstructions {
+  case nothing
+  case look_left
+  case look_right
+  case look_str8
+  case smile
+  case close_eyes
+  public static func == (a: VIDVLiveness.livenessInstructions, b: VIDVLiveness.livenessInstructions) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension VIDVLiveness.stages : Swift.Equatable {}
+extension VIDVLiveness.stages : Swift.Hashable {}
+extension VIDVLiveness.VIDVLivenessLanguage : Swift.Equatable {}
+extension VIDVLiveness.VIDVLivenessLanguage : Swift.Hashable {}
+extension VIDVLiveness.livenessInstructions : Swift.Equatable {}
+extension VIDVLiveness.livenessInstructions : Swift.Hashable {}

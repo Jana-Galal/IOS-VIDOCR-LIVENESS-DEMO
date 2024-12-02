@@ -1,0 +1,4 @@
+framework module VIDVLiveness {
+  header "VIDVLiveness-Swift.h"
+  requires objc
+}

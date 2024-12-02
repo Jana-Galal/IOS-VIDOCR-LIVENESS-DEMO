@@ -1,0 +1,1628 @@
+{
+    "resources":[
+        {
+            "id":"ocr",
+            "name":"OCR",
+            "quota":5,
+            "specs":{
+                "documents":[{
+                    "document_type":"egy_nid",
+                    "document_verification":true,
+                    "data_validation":true,
+                    "transliteration":true,
+                    "labels":[{
+                        "label":"front",
+                        "detection_frame":"front_detection_frame",
+                        "detection_icon":"detection_success",
+                        "success_frame":"front_detection_frame_success",
+                        "success_icon":"detection_success",
+                        "failure_frame":"front_detection_frame_failure",
+                        "failure_icon":"VIDV_error",
+                        "success_sound":"detection_sound",
+                        "label_verification":true,
+                        "label_validations":{
+                            "frame_width":20,
+                            "frame_height":250,
+                            "document_shape": {
+                                "name" : "rectangle",
+                                "specs": {
+                                    "min_aspect_ratio":1.4,
+                                    "max_aspect_ratio":1.9
+                                }
+                            },
+                            "faces_count":1,
+                            "can_autocapture":true
+                        },
+                        "positions":[
+                            {
+                                "position":"top",
+                                "is_real":true,
+                                "ocr":true,
+                                "validation":true,
+                                "verification":true,
+                                "flashlight":true
+                            },
+                            {
+                                "position":"middle",
+                                "is_real":true,
+                                "ocr":false,
+                                "validation":false,
+                                "verification":true,
+                                "flashlight":false
+                            },
+                            {
+                                "position":"bottom",
+                                "is_real":true,
+                                "ocr":false,
+                                "validation":true,
+                                "verification":true,
+                                "flashlight":true
+                            }
+                        ],
+                        "tutorial":{
+                            "image":"VIDV_handHoldingId",
+                            "title":"Before starting:",
+                            "desc":"Make sure you hold your ID in your hand and avoid placing it on any surface",
+                            "button":"Start",
+                            "imageType":"jpeg"
+                        }
+                        
+                    },{
+                        "label":"back",
+                        "detection_frame":"back_detection_frame",
+                        "detection_icon":"back_detection_icon",
+                        "success_frame":"back_detection_frame_success",
+                        "success_icon":"detection_success",
+                        "success_sound":"detection_sound",
+                        "failure_frame":"back_detection_frame_failure",
+                        "failure_icon":"VIDV_error",
+                        "label_verification":false,
+                        "label_validations":{
+                            "frame_width":20,
+                            "frame_height":250,
+                            "document_shape": {
+                                "name" : "rectangle",
+                                "specs": {
+                                    "min_aspect_ratio":1.4,
+                                    "max_aspect_ratio":1.9
+                                }
+                            },
+                            "faces_count":0,
+                            "can_autocapture":true
+                        },
+                        "positions":[
+                            {
+                                "position":"top",
+                                "is_real":true,
+                                "ocr":false,
+                                "validation":true,
+                                "verification":false,
+                                "flashlight":true
+                            },
+                            {
+                                "position":"middle",
+                                "is_real":true,
+                                "ocr":true,
+                                "validation":false,
+                                "verification":true,
+                                "flashlight":false
+                            },
+                            {
+                                "position":"bottom",
+                                "is_real":true,
+                                "ocr":false,
+                                "validation":true,
+                                "verification":false,
+                                "flashlight":true
+                            }
+
+                        ],
+                        "tutorial":{
+                            "image":"VIDV_FlipCard",
+                            "title":"Scan the back of your national ID",
+                            "desc":"",
+                            "button":"Next",
+                            "imageType": "GIF"
+                        }
+                    }],
+                    "tutorial":[{
+                        "image":"Clean-ID",
+                        "title":"title_nid_tutorial_step1",
+                        "desc":"desc_nid_tutorial_step1"
+                    },{
+                        "image":"Clean-Camera-Lens",
+                        "title":"title_nid_tutorial_step2",
+                        "desc":"desc_nid_tutorial_step2"
+                    },{
+                        "image":"No-Glares",
+                        "title":"title_nid_tutorial_step3",
+                        "desc":"desc_nid_tutorial_step3"
+                    },{
+                        "image":"Dont-Cover-ID",
+                        "title":"title_nid_tutorial_step4",
+                        "desc":"desc_nid_tutorial_step4"
+                    }]
+                },{
+                        "document_type":"egy_nid_One",
+                        "document_verification":true,
+                        "data_validation":true,
+                        "transliteration":true,
+                        "labels":[{
+                            "label":"front",
+                            "detection_frame":"front_detection_frame",
+                            "detection_icon":"detection_success",
+                            "success_frame":"front_detection_frame_success",
+                            "success_icon":"detection_success",
+                            "failure_frame":"front_detection_frame_failure",
+                            "failure_icon":"VIDV_error",
+                            "success_sound":"detection_sound",
+                            "label_verification":true,
+                            "label_validations":{
+                                "frame_width":20,
+                                "frame_height":250,
+                                "document_shape": {
+                                    "name" : "rectangle",
+                                    "specs": {
+                                        "min_aspect_ratio":1.4,
+                                        "max_aspect_ratio":1.9
+                                    }
+                                },
+                                "faces_count":1,
+                                "can_autocapture":true
+                            },
+                            "positions":[
+
+                                {
+                                    "position":"middle",
+                                    "is_real":true,
+                                    "ocr":false,
+                                    "validation":false,
+                                    "verification":true,
+                                    "flashlight":false
+                                }
+                            ],
+                            "tutorial":{
+                                "image":"Scanning-Process",
+                                "title":"title_nid_tutorial_front",
+                                "desc":"desc_nid_tutorial_front",
+                                "button":"button_nid_tutorial_front"
+                            }
+                            
+                        },{
+                            "label":"back",
+                            "detection_frame":"back_detection_frame",
+                            "detection_icon":"back_detection_icon",
+                            "success_frame":"back_detection_frame_success",
+                            "success_icon":"detection_success",
+                            "success_sound":"detection_sound",
+                            "failure_frame":"back_detection_frame_failure",
+                            "failure_icon":"VIDV_error",
+                            "label_verification":false,
+                            "label_validations":{
+                                "frame_width":20,
+                                "frame_height":250,
+                                "document_shape": {
+                                    "name" : "rectangle",
+                                    "specs": {
+                                        "min_aspect_ratio":1.4,
+                                        "max_aspect_ratio":1.9
+                                    }
+                                },
+                                "faces_count":0,
+                                "can_autocapture":true
+                            },
+                            "positions":[
+
+                                {
+                                    "position":"middle",
+                                    "is_real":true,
+                                    "ocr":true,
+                                    "validation":false,
+                                    "verification":true,
+                                    "flashlight":false
+                                }
+
+                            ],
+                            "tutorial":{
+                                "image":"back_scanning",
+                                "title":"title_nid_tutorial_back",
+                                "desc":"desc_nid_tutorial_back",
+                                "button":"button_nid_tutorial_back"
+                            }
+                        }],
+                        "tutorial":[{
+                            "image":"Clean-ID",
+                            "title":"title_nid_tutorial_step1",
+                            "desc":"desc_nid_tutorial_step1"
+                        },{
+                            "image":"Clean-Camera-Lens",
+                            "title":"title_nid_tutorial_step2",
+                            "desc":"desc_nid_tutorial_step2"
+                        },{
+                            "image":"No-Glares",
+                            "title":"title_nid_tutorial_step3",
+                            "desc":"desc_nid_tutorial_step3"
+                        },{
+                            "image":"Dont-Cover-ID",
+                            "title":"title_nid_tutorial_step4",
+                            "desc":"desc_nid_tutorial_step4"
+                        }]
+                    },{
+                    "document_type":"commercial_register",
+                    "labels":[{
+                        "label":"page1",
+                        "frame":"detection_frame",
+                        "label_validations":{
+                            "frame_width":1000,
+                            "frame_height":1000,
+                            "document_shape": {
+                                "name" : "rectangle",
+                                "specs": {
+                                    "min_aspect_ratio":2,
+                                    "max_aspect_ratio":4
+                                }
+                            },
+                            "faces_count":-1,
+                            "can_autocapture":true
+                        },
+                        "positions":[
+                            {
+                                "position":"middle",
+                                "is_real":true,
+                                "flashlight":false
+                            }
+                        ],
+                        "tutorial":null
+                    },{
+                        "label":"page2",
+                        "frame":"detection_frame",
+                        "label_validations":{
+                            "frame_width":1000,
+                            "frame_height":1000,
+                            "document_shape": {
+                                "name" : "rectangle",
+                                "specs": {
+                                    "min_aspect_ratio":2,
+                                    "max_aspect_ratio":4
+                                }
+                            },
+                            "faces_count":-1,
+                            "can_autocapture":true
+                        },
+                        "positions":[
+                            {
+                                "position":"middle",
+                                "is_real":true,
+                                "flashlight":false
+                            }
+                        ],
+                        "tutorial":null
+                    }],
+                    "tutorial":[]
+                },{
+                    "document_type":"manual_capture_document",
+                    "labels":[{
+                        "label":"manual",
+                        "frame":"detection_frame",
+                        "label_validations":{
+                            "frame_width":1000,
+                            "frame_height":1000,
+                            "document_shape": {
+                                "name" : "rectangle",
+                                "specs": {
+                                    "min_aspect_ratio":1.4,
+                                    "max_aspect_ratio":1.9
+                                }
+                            },
+                            "faces_count":-1,
+                            "can_autocapture":false
+                        },
+                        "positions":[
+                            {
+                                "position":"top",
+                                "is_real":true,
+                                "flashlight":true
+                            },
+                            {
+                                "position":"middle",
+                                "is_real":true,
+                                "flashlight":false
+                            }
+                        ],
+                        "tutorial":null
+                    },{
+                        "label":"auto",
+                        "frame":"detection_frame",
+                        "label_validations":{
+                            "frame_width":1000,
+                            "frame_height":1000,
+                            "document_shape": {
+                                "name" : "rectangle",
+                                "specs": {
+                                    "min_aspect_ratio":1.4,
+                                    "max_aspect_ratio":1.9
+                                }
+                            },
+                            "faces_count":1,
+                            "can_autocapture":true
+                        },
+                        "positions":[
+                            {
+                                "position":"top",
+                                "is_real":true,
+                                "flashlight":true
+                            },
+                            {
+                                "position":"middle",
+                                "is_real":true,
+                                "flashlight":false
+                            }
+                        ],
+                        "tutorial":null
+                    }],
+                    "tutorial":[]
+                }
+                ]
+            },
+            "strings":[
+                {
+                    "lang":"en",
+                    "direction":"ltr",
+                    "values":[
+                        {
+                            "key":"title_nid_tutorial_step1",
+                            "value":"Step 1"
+                        },
+                        {
+                            "key":"desc_nid_tutorial_step1",
+                            "value":"Clean your ID"
+                        },
+                        {
+                            "key":"title_nid_tutorial_step2",
+                            "value":"Step 2"
+                        },
+                        {
+                            "key":"desc_nid_tutorial_step2",
+                            "value":"Clean your camera lens"
+                        },
+                        {
+                            "key":"title_nid_tutorial_step3",
+                            "value":"Step 3"
+                        },
+                        {
+                            "key":"desc_nid_tutorial_step3",
+                            "value":"No glares or shadows on ID"
+                        },
+                        {
+                            "key":"title_nid_tutorial_step4",
+                            "value":"Step 4"
+                        },
+                        {
+                            "key":"desc_nid_tutorial_step4",
+                            "value":"Hands should not cover ID"
+                        },
+                        {
+                            "key":"title_nid_tutorial_front",
+                            "value":"1. Front"
+                        },
+                        {
+                            "key":"desc_nid_tutorial_front",
+                            "value":"Move your ID within the frame.\nCapturing happens automatically."
+                        },
+                        {
+                            "key":"button_nid_tutorial_front",
+                            "value":"Scan"
+                        },{
+                            "key":"title_nid_tutorial_back",
+                            "value":"2. Back"
+                        },
+                        {
+                            "key":"desc_nid_tutorial_back",
+                            "value":"Move your ID within the frame.\nCapturing happens automatically."
+                        },
+                        {
+                            "key":"button_nid_tutorial_back",
+                            "value":"Scan"
+                        },
+                        {
+                            "key":"nid_detecting_progress",
+                            "value":"Scanning ID"
+                        },
+                        {
+                            "key":"nid_shape_detection_failure",
+                            "value":"Scan National ID"
+                        },
+                        {
+                            "key":"nid_face_detection_failure",
+                            "value":"Not a Valid ID"
+                        },
+                        {
+                            "key":"nid_tilt_failure",
+                            "value":"Do not tilt"
+                        },
+                        {
+                            "key":"nid_in_frame_failure",
+                            "value":"Insert ID in Frame"
+                        },
+                        {
+                            "key":"nid_far_from_frame_failure",
+                            "value":"Bring ID closer"
+                        },
+                        {
+                            "key":"nid_removed",
+                            "value":"ID has been removed! Please keep ID in front of camera"
+                        },
+                        {
+                            "key":"spash_title",
+                            "value":"Time for ID scanning!"
+                        },
+                        {
+                            "key":"spash_subtitle",
+                            "value":"We’ll walk you through it till you make it right.."
+                        }
+                        ,
+                        {
+                            "key":"start",
+                            "value":"Start"
+                        },
+                        {
+                            "key":"sorry",
+                            "value":"Sorry..."
+                        },
+                        {
+                            "key":"exit",
+                            "value":"Exit"
+                        },
+                        {
+                            "key":"try_again",
+                            "value":"Try Again"
+                        },
+                        {
+                            "key":"waiting_title",
+                            "value":"Give us a moment please"
+                        },
+                        {
+                            "key":"waiting_subtitle",
+                            "value":"We're now checking your data.."
+                        },
+                        {
+                            "key":"back_title",
+                            "value":"Great, Now flip it!"
+                        },
+                        {
+                            "key":"back_subtitle",
+                            "value":"It’s time to scan the back of your ID."
+                        },
+                        {
+                            "key":"waiting_subtitle_2",
+                            "value":"Position the barcode within the frame."
+                        },
+                        {
+                            "key":"scan_id_front",
+                            "value":"Front ID"
+                        }
+                        ,
+                        {
+                            "key":"scan_id_back",
+                            "value":"Back ID"
+                        },
+                        {
+                            "key":"watermark_error",
+                            "value":"Verification failed, please try again"
+                        },
+                        {
+                            "key":"no_internet",
+                            "value":"Couldn't connect to the server. Please check your internet connection and try again."
+                        },
+                        {
+                            "key":"quit_session",
+                            "value":"Quit this session?"
+                        },
+                        {
+                            "key":"tow_documents",
+                            "value":"Do not place more than ine document in the screen"
+                        },
+                        {
+                            "key":"extraction_faild",
+                            "value":"Data extraction failed you need to restart the process"
+                        },
+                        {
+                            "key":"ok",
+                            "value":"Ok"
+                        },
+                        {
+                            "key":"not_original_title",
+                            "value":"The ID is not original "
+                        },
+                        {
+                            "key":"not_original_subtitle",
+                            "value":"Please provide your original ID"
+                        },
+                        {
+                            "key":"not_clear_id_title",
+                            "value":"The ID scan is unclear"
+                        },
+                        {
+                            "key":"not_clear_id_subtitle",
+                            "value":"The image of your scanned ID is unclear. Please make sure you have a proper lighting"
+                        },
+                        {
+                            "key":"exit_question",
+                            "value":"Are you sure you want to exit?"
+                        },
+                        {
+                            "key":"stay",
+                            "value":"Stay"
+                        },
+                        {
+                            "key":"allow_camera",
+                            "value":"You have to allow camera access to use this service"
+                        },
+                        {
+                            "key":"allow_location",
+                            "value":"You have to allow location access to use this service"
+                        },
+                        {
+                            "key":"settings",
+                            "value":"Settings"
+                        },
+                        {
+                            "key":"idv_ocr_detecting_1",
+                            "value":"Scanning ID"
+                        },
+                        {
+                            "key":"idv_ocr_detecting_2",
+                            "value":"Extracting your Data"
+                        },
+                        {
+                            "key":"idv_ocr_detecting_3",
+                            "value":"Analyzing Details"
+                        },
+                        {
+                            "key":"idv_ocr_detecting_4",
+                            "value":"Receiving Data"
+                        },
+                        {
+                            "key":"first_name",
+                            "value":"First Name"
+                        },
+                        {
+                            "key":"family_name",
+                            "value":"Family Name"
+                        },
+                        {
+                            "key":"national_id",
+                            "value":"National ID"
+                        },
+                        {
+                            "key":"release",
+                            "value":"Release Date"
+                        },
+                        {
+                            "key":"expiration",
+                            "value":"Expiration Date"
+                        },
+                        {
+                            "key":"social_info",
+                            "value":"Social Information"
+                        },
+                        {
+                            "key":"gender",
+                            "value":"Gender"
+                        },
+                        {
+                            "key":"religion",
+                            "value":"Religion"
+                        },
+                        {
+                            "key":"marital_status",
+                            "value":"Marital Status"
+                        },
+                        {
+                            "key":"husband_name",
+                            "value":"Husband Name"
+                        },
+                        {
+                            "key":"profession",
+                            "value":"Profession"
+                        },
+                        {
+                            "key":"address_info",
+                            "value":"Address Information"
+                        },
+                        {
+                            "key":"area",
+                            "value":"Area"
+                        },
+                        {
+                            "key":"street",
+                            "value":"Street"
+                        },
+                        {
+                            "key":"correct_info",
+                            "value":"Continue"
+                        },
+                        {
+                            "key":"analyzing",
+                            "value":"Analyzing.."
+                        }
+                        
+                    ]
+                },
+                {
+                    "lang":"ar",
+                    "direction":"rtl",
+                    "values":[
+                        {
+                            "key":"title_nid_tutorial_step1",
+                            "value":"الخطوة الاولى"
+                        },
+                        {
+                            "key":"desc_nid_tutorial_step1",
+                            "value":"قم بتنظيف بطاقتك"
+                        },
+                        {
+                            "key":"title_nid_tutorial_step2",
+                            "value":"الخطوة الثانية"
+                        },
+                        {
+                            "key":"desc_nid_tutorial_step2",
+                            "value":"قم بتنظيف عدسة الكاميرا"
+                        },
+                        {
+                            "key":"title_nid_tutorial_step3",
+                            "value":"الخطوة الثالثة"
+                        },
+                        {
+                            "key":"desc_nid_tutorial_step3",
+                            "value":"ابتعد عن النور الساطع و الظلال"
+                        },
+                        {
+                            "key":"title_nid_tutorial_step4",
+                            "value":"الخطوة الرابعة"
+                        },
+                        {
+                            "key":"desc_nid_tutorial_step4",
+                            "value":"يجب ألا تغطي البطاقة"
+                        },
+                        {
+                            "key":"title_nid_tutorial_front",
+                            "value":"الجانب الأمامي من البطاقة"
+                        },
+                        {
+                            "key":"desc_nid_tutorial_front",
+                            "value":"حرك البطاقة داخل الإطار. التصوير يحدث تلقائيا"
+                        },
+                        {
+                            "key":"button_nid_tutorial_front",
+                            "value":"صور"
+                        },{
+                            "key":"title_nid_tutorial_back",
+                            "value":"الجانب الخلفي  من البطاقة"
+                        },
+                        {
+                            "key":"desc_nid_tutorial_back",
+                            "value":"حرك البطاقة داخل الإطار. التصوير يحدث تلقائيا"
+                        },
+                        {
+                            "key":"button_nid_tutorial_back",
+                            "value":"صور"
+                        },
+                        {
+                            "key":"nid_face_detection_failure",
+                            "value":"بطاقة غير صحيحة"
+                        },
+                        {
+                            "key":"nid_tilt_failure",
+                            "value":"لا تميل"
+                        },
+                        {
+                            "key":"nid_in_frame_failure",
+                            "value":"أدخل البطاقة في الإطار"
+                        },
+                        {
+                            "key":"nid_far_from_frame_failure",
+                            "value":"قم بتقريب البطاقة"
+                        },
+                        {
+                            "key":"nid_removed",
+                            "value":"تمت إزالة البطاقة! يرجى الاحتفاظ بالبطاقة أمام الكاميرا"
+                        },
+                        {
+                            "key":"sorry",
+                            "value":"عذراً..."
+                        },
+                        {
+                            "key":"spash_title",
+                            "value":"يلا نصور البطاقة!"
+                        },
+                        {
+                            "key":"spash_subtitle",
+                            "value":"هنساعدك في كل خطوة لحد ما تخلص.."
+                        }
+                        ,
+                        {
+                            "key":"start",
+                            "value":"ابدأ"
+                        },
+                        {
+                            "key":"exit",
+                            "value":"خروج"
+                        },
+                        {
+                            "key":"try_again",
+                            "value":"إعادة المحاولة"
+                        },
+                        {
+                            "key":"waiting_title",
+                            "value":"استنى من فضلك"
+                        },
+                        {
+                            "key":"waiting_subtitle",
+                            "value":"بنتأكد من البيانات.."
+                        },
+                        {
+                            "key":"back_title",
+                            "value":"تمام، اقلب البطاقة!"
+                        },
+                        {
+                            "key":"back_subtitle",
+                            "value":"يلا نصور ظهر البطاقة.."
+                        },
+                        {
+                            "key":"waiting_subtitle_2",
+                            "value":"خلي الباركود جوه المربع.."
+                        },
+                        {
+                            "key":"scan_id_front",
+                            "value":"واجهة البطاقة"
+                        }
+                        ,
+                        {
+                            "key":"scan_id_back",
+                            "value":"ظهر البطاقة"
+                        },
+                        {
+                            "key":"watermark_error",
+                            "value":"فشل التحقق، برجاء المحاولة مرة اخرى"
+                        },
+                        {
+                            "key":"no_internet",
+                            "value":"يرجى التأكد من اتصالك بالإنترنت وإعادة المحاولة"
+                        },
+                        {
+                            "key":"quit_session",
+                            "value":"الخروج من الخدمة؟"
+                        },
+                        {
+                            "key":"tow_documents",
+                            "value":"لا تضع اكثر من بطاقة واحدة امام الكاميرا"
+                        },
+                        {
+                            "key":"extraction_faild",
+                            "value":"فشل استخراج البيانات تحتاج إلى إعادة العملية"
+                        },
+                        {
+                            "key":"ok",
+                            "value":"حسناً"
+                        },
+                        {
+                            "key":"not_original_title",
+                            "value":"البطاقة الشخصية مش أصلية"
+                        },
+                        {
+                            "key":"not_original_subtitle",
+                            "value":"من فضلك صور بطاقتك الأصلية"
+                        },
+                        {
+                            "key":"not_clear_id_title",
+                            "value":"صورة البطاقة الشخصية مش واضحة"
+                        },
+                        {
+                            "key":"not_clear_id_subtitle",
+                            "value":"من فضلك اتأكد من وجود ضوء كافي"
+                        },
+                        {
+                            "key":"exit_question",
+                            "value":"هل انت متأكد انك تريد الخروج؟"
+                        },
+                        {
+                            "key":"stay",
+                            "value":"البقاء"
+                        },
+                        {
+                            "key":"allow_camera",
+                            "value":"يجب عليك السماح بالوصول إلى الكاميرا لاستخدام هذه الخدمة"
+                        },
+                        {
+                            "key":"allow_location",
+                            "value":"يجب عليك السماح بالوصول إلى الموقع لاستخدام هذه الخدمة"
+                        },
+                        {
+                            "key":"settings",
+                            "value":"الإعدادات"
+                        },
+                        {
+                            "key":"idv_ocr_detecting_1",
+                            "value":"يتم تصوير البطاقة"
+                        },
+                        {
+                            "key":"idv_ocr_detecting_2",
+                            "value":"يتم استخراج البيانات"
+                        },
+                        {
+                            "key":"idv_ocr_detecting_3",
+                            "value":"يتم تحليل التفاصيل"
+                        },
+                        {
+                            "key":"idv_ocr_detecting_4",
+                            "value":"جاري استقبال البيانات"
+                        },
+                        {
+                            "key":"first_name",
+                            "value":"الإسم الأول"
+                        },
+                        {
+                            "key":"family_name",
+                            "value":"إسم العائلة"
+                        },
+                        {
+                            "key":"national_id",
+                            "value":"الرقم القومي"
+                        },
+                        {
+                            "key":"release",
+                            "value":"تاريخ الإصدار"
+                        },
+                        {
+                            "key":"expiration",
+                            "value":"تاريخ الإنتهاء"
+                        },
+                        {
+                            "key":"social_info",
+                            "value":"البيانات الاجتماعية"
+                        },
+                        {
+                            "key":"gender",
+                            "value":"النوع"
+                        },
+                        {
+                            "key":"religion",
+                            "value":"الديانة"
+                        },
+                        {
+                            "key":"marital_status",
+                            "value":"الحالة الإجتماعية"
+                        },
+                        {
+                            "key":"husband_name",
+                            "value":"إسم الزوج"
+                        },
+                        {
+                            "key":"profession",
+                            "value":"المهنة"
+                        },
+                        {
+                            "key":"address_info",
+                            "value":"بيانات الإقامة"
+                        },
+                        {
+                            "key":"area",
+                            "value":"المنطقة"
+                        },
+                        {
+                            "key":"street",
+                            "value":"الشارع"
+                        },
+                        {
+                            "key":"correct_info",
+                            "value":"التالي"
+                        },
+                        {
+                            "key":"analyzing",
+                            "value":"جار المعالجة.."
+                        }
+                        
+                        
+                    ]
+                }
+            ],
+            "assets":[
+                {
+                    "key":"asset_nid_tutorial_step1",
+                    "value":"Clean-ID",
+                    "last_updated":"07-03-2022 15:40:00"
+                },
+                {
+                    "key":"asset_nid_tutorial_step2",
+                    "value":"Clean-Camera-Lens",
+                    "last_updated":"07-03-2022 15:40:00"
+                },
+                {
+                    "key":"asset_nid_tutorial_step3",
+                    "value":"No-Glares",
+                    "last_updated":"07-03-2022 15:40:00"
+                },
+                {
+                    "key":"asset_nid_tutorial_step4",
+                    "value":"Dont-Cover-ID",
+                    "last_updated":"07-03-2022 15:40:00"
+                },
+                {
+                    "key":"asset_nid_tutorial_front",
+                    "value":"Scanning-Process",
+                    "last_updated":"02-03-2022 15:40:00"
+                },
+                {
+                    "key":"front_detection_frame",
+                    "value":"https://valify-deployment.s3.eu-central-1.amazonaws.com/sdk/ocr/assets/detection_frame.png",
+                    "last_updated":"07-03-2022 16:00:00"
+                },
+                {
+                    "key":"front_detection_icon",
+                    "value":"https://valify-deployment.s3.eu-central-1.amazonaws.com/sdk/ocr/assets/detection_icon.png",
+                    "last_updated":"07-03-2022 16:00:00"
+                },
+                {
+                    "key":"front_detection_success_frame",
+                    "value":"https://valify-deployment.s3.eu-central-1.amazonaws.com/sdk/ocr/assets/success_detection_frame.png",
+                    "last_updated":"07-03-2022 16:00:00"
+                },
+                {
+                    "key":"front_detection_success_icon",
+                    "value":"https://valify-deployment.s3.eu-central-1.amazonaws.com/sdk/ocr/assets/success_detection_icon.png",
+                    "last_updated":"07-03-2022 16:00:00"
+                },
+                {
+                    "key":"front_detection_failure_frame",
+                    "value":"https://valify-deployment.s3.eu-central-1.amazonaws.com/sdk/ocr/assets/failure_detection_frame.png",
+                    "last_updated":"07-03-2022 16:00:00"
+                },
+                {
+                    "key":"front_detection_failure_icon",
+                    "value":"https://valify-deployment.s3.eu-central-1.amazonaws.com/sdk/ocr/assets/failure_detection_icon.png",
+                    "last_updated":"07-03-2022 16:00:00"
+                },
+                {
+                    "key":"asset_nid_tutorial_back",
+                   "value":"https://valify-deployment.s3.eu-central-1.amazonaws.com/sdk/ocr/assets/back_scanning.png",
+                   "last_updated":"20-03-2022 15:40:00"
+                },
+                {
+                    "key":"back_detection_frame",
+                    "value":"https://valify-deployment.s3.eu-central-1.amazonaws.com/sdk/ocr/assets/detection_frame.png",
+                    "last_updated":"07-03-2022 16:00:00"
+                },
+                {
+                    "key":"back_detection_icon",
+                    "value":"https://valify-deployment.s3.eu-central-1.amazonaws.com/sdk/ocr/assets/detection_icon.png",
+                    "last_updated":"07-03-2022 16:00:00"
+                },
+                {
+                    "key":"back_detection_success_frame",
+                    "value":"https://valify-deployment.s3.eu-central-1.amazonaws.com/sdk/ocr/assets/success_detection_frame.png",
+                    "last_updated":"07-03-2022 16:00:00"
+                },
+                {
+                    "key":"back_detection_success_icon",
+                    "value":"https://valify-deployment.s3.eu-central-1.amazonaws.com/sdk/ocr/assets/success_detection_icon.png",
+                    "last_updated":"07-03-2022 16:00:00"
+                },
+                {
+                    "key":"back_detection_failure_frame",
+                    "value":"https://valify-deployment.s3.eu-central-1.amazonaws.com/sdk/ocr/assets/failure_detection_frame.png",
+                    "last_updated":"07-03-2022 16:00:00"
+                },
+                {
+                    "key":"back_detection_failure_icon",
+                    "value":"https://valify-deployment.s3.eu-central-1.amazonaws.com/sdk/ocr/assets/failure_detection_icon.png",
+                    "last_updated":"07-03-2022 16:00:00"
+                },
+                {
+                    "key":"tutorial_previous_icon",
+                    "value":"https://valify-deployment.s3.eu-central-1.amazonaws.com/sdk/ocr/assets/previous_icon.png",
+                    "last_updated":"20-03-2022 16:00:00"
+                },
+                {
+                    "key":"tutorial_next_icon",
+                    "value":"https://valify-deployment.s3.eu-central-1.amazonaws.com/sdk/ocr/assets/next_icon.png",
+                    "last_updated":"20-03-2022 16:00:00"
+                },
+                {
+                    "key":"manual_capture",
+                    "value":"https://valify-deployment.s3.eu-central-1.amazonaws.com/sdk/ocr/assets/capture_button.png",
+                    "last_updated":"20-03-2022 16:00:00"
+                }
+                
+            ],
+            "sounds":[
+                {
+                    "lang":"en",
+                    "values":[
+                        {
+                            "key":"detection_sound",
+                            "value":"https://valify-deployment.s3.eu-central-1.amazonaws.com/sdk/ocr/sounds/detection_success.mp3",
+                            "last_updated":"07-03-2022 15:40:00"
+                        }
+                    ]
+                }
+            ],
+            "terms":[
+                {
+                    "lang":"en",
+                    "value":"base64 for english ocr terms"
+                },
+                {
+                    "lang":"de",
+                    "value":"base64 for deutsch ocr terms"
+                }
+            ]
+        }, {
+            "id":"liveness",
+            "name":"Liveness",
+            "quota":5,
+            "specs":{
+                "liveness":{
+                    "actions":{
+                        "look_straight":{
+                            "asset":"asset_look_straight",
+                            "sound":"sound_look_straight",
+                            "text":"message_look_straight",
+                            "error":"error_look_straight"
+                        },
+                        "look_left":{
+                            "asset":"asset_look_left",
+                            "sound":"sound_look_left",
+                            "text":"message_look_left",
+                            "error":"error_look_left"
+                        },
+                        "look_right":{
+                            "asset":"asset_look_right",
+                            "sound":"sound_look_right",
+                            "text":"message_look_right",
+                            "error":"error_look_right"
+                        },
+                        "smile":{
+                            "asset":"asset_smile",
+                            "sound":"sound_smile",
+                            "text":"message_smile",
+                            "error":"error_smile"
+                        },
+                        "close_eyes":{
+                            "asset":"asset_close_eyes",
+                            "sound":"sound_close_eyes",
+                            "text":"message_close_eyes",
+                            "error":"error_close_eyes"
+                        }
+                    },
+                    "tutorial":[{
+                        "image":"asset_liveness_tutorial_step1",
+                        "title":"title_liveness_tutorial_step1",
+                        "desc":"desc_liveness_tutorial_step1"
+                    },{
+                        "image":"asset_liveness_tutorial_step2",
+                        "title":"title_liveness_tutorial_step2",
+                        "desc":"desc_liveness_tutorial_step2"
+                    }],
+                    "errors":{
+                        "face_removed":{
+                            "code":7202,
+                            "message":"face_removed_failure"
+                        },
+                        "more_than_one_face":{
+                            "code":7203,
+                            "message":"more_than_one_face_failure"
+                        },
+                        "new_face":{
+                            "code":7204,
+                            "message":"new_face_failure"
+                        },
+                        "action_timeout":{
+                            "code":7205,
+                            "message":"action_timeout_failure"
+                        },
+                        "wrong_action":{
+                            "code":7206,
+                            "message":"wrong_action_failure"
+                        }
+                    },
+                    "trials":10
+                },
+                "facematch":{
+
+                }
+            },
+            "strings":[
+                {
+                    "lang":"en",
+                    "direction":"ltr",
+                    "values":[
+                        {
+                            "key":"title_liveness_tutorial_step1",
+                            "value":"Step 1"
+                        },
+                        {
+                            "key":"desc_liveness_tutorial_step1",
+                            "value":"Clean your ID"
+                        },
+                        {
+                            "key":"title_liveness_tutorial_step2",
+                            "value":"Step 2"
+                        },
+                        {
+                            "key":"desc_liveness_tutorial_step2",
+                            "value":"Hands should not cover ID"
+                        },
+                        {
+                            "key":"message_look_straight",
+                            "value":"Look to the camera"
+                        },
+                        {
+                            "key":"error_look_straight",
+                            "value":"Please keep looking to the camera"
+                        },
+                        {
+                            "key":"message_look_left",
+                            "value":"Look to the left"
+                        },
+                        {
+                            "key":"error_look_left",
+                            "value":"Please look to the left"
+                        },
+                        {
+                            "key":"message_look_right",
+                            "value":"Look to the right"
+                        },
+                        {
+                            "key":"error_look_right",
+                            "value":"Please look to the right"
+                        },
+                        {
+                            "key":"message_smile",
+                            "value":"Smile"
+                        },
+                        {
+                            "key":"error_smile",
+                            "value":"Please smile"
+                        },
+                        {
+                            "key":"message_close_eyes",
+                            "value":"Close your eyes"
+                        },
+                        {
+                            "key":"error_close_eyes",
+                            "value":"Please close your eyes"
+                        },
+                        {
+                            "key":"face_removed_failure",
+                            "value":"No human detected"
+                        },
+                        {
+                            "key":"more_than_one_face_failure",
+                            "value":"There should be only one person in the camera"
+                        },
+                        {
+                            "key":"new_face_failure",
+                            "value":"New face was detected"
+                        },
+                        {
+                            "key":"action_timeout_failure",
+                            "value":"Time exceeded"
+                        },
+                        {
+                            "key":"wrong_action_failure",
+                            "value":"Please follow the right actions"
+                        }
+                    ]
+                }
+            ],
+            "assets":[
+                {
+                    "key":"asset_nid_tutorial_step1",
+                    "value":"https://valify-deployment.s3.eu-central-1.amazonaws.com/sdk/ocr/wm-gifs/Clean-ID.gif",
+                    "last_updated":"13-04-2022 13:30:00"
+                },
+                {
+                    "key":"asset_nid_tutorial_step2",
+                    "value":"https://valify-deployment.s3.eu-central-1.amazonaws.com/sdk/ocr/wm-gifs/No-Glares.gif",
+                    "last_updated":"13-04-2022 13:30:00"
+                },
+                {
+                    "key":"asset_look_straight",
+                    "value":"https://valify-deployment.s3.eu-central-1.amazonaws.com/sdk/active-liveness/valify_liveness_look_straight.png",
+                    "last_updated":"04-04-2022 10:15:00"
+                },
+                {
+                    "key":"asset_look_left",
+                    "value":"https://valify-deployment.s3.eu-central-1.amazonaws.com/sdk/active-liveness/valify_liveness_look_left.png",
+                    "last_updated":"04-04-2022 10:15:00"
+                },
+                {
+                    "key":"asset_look_right",
+                    "value":"https://valify-deployment.s3.eu-central-1.amazonaws.com/sdk/active-liveness/valify_liveness_look_right.png",
+                    "last_updated":"04-04-2022 10:15:00"
+                },
+                {
+                    "key":"asset_smile",
+                    "value":"https://valify-deployment.s3.eu-central-1.amazonaws.com/sdk/active-liveness/valify_liveness_smile.png",
+                    "last_updated":"04-04-2022 10:15:00"
+                },
+                {
+                    "key":"asset_close_eyes",
+                    "value":"https://valify-deployment.s3.eu-central-1.amazonaws.com/sdk/active-liveness/valify_liveness_close_eyes.png",
+                    "last_updated":"04-04-2022 10:15:00"
+                }
+            ],
+            "sounds":[
+                {
+                    "lang":"en",
+                    "values":[
+                        {
+                            "key":"sound_look_straight",
+                            "value":"https://valify-deployment.s3.eu-central-1.amazonaws.com/sdk/active-liveness/valify_liveness_look_straight_en.mp3",
+                            "last_updated":"04-04-2022 10:15:00"
+                        },
+                        {
+                            "key":"sound_look_left",
+                            "value":"https://valify-deployment.s3.eu-central-1.amazonaws.com/sdk/active-liveness/valify_liveness_look_left_en.mp3",
+                            "last_updated":"04-04-2022 10:15:00"
+                        },
+                        {
+                            "key":"sound_look_right",
+                            "value":"https://valify-deployment.s3.eu-central-1.amazonaws.com/sdk/active-liveness/valify_liveness_look_right_en.mp3",
+                            "last_updated":"04-04-2022 10:15:00"
+                        },
+                        {
+                            "key":"sound_smile",
+                            "value":"https://valify-deployment.s3.eu-central-1.amazonaws.com/sdk/active-liveness/valify_liveness_smile_en.mp3",
+                            "last_updated":"04-04-2022 10:15:00"
+                        },
+                        {
+                            "key":"sound_close_eyes",
+                            "value":"https://valify-deployment.s3.eu-central-1.amazonaws.com/sdk/active-liveness/valify_liveness_close_eyes_en.mp3",
+                            "last_updated":"04-04-2022 10:15:00"
+                        }
+                    ]
+                },
+                {
+                    "lang":"ar",
+                    "values":[
+                        {
+                            "key":"sound_look_straight",
+                            "value":"https://valify-deployment.s3.eu-central-1.amazonaws.com/sdk/active-liveness/valify_liveness_look_straight_ar.mp3",
+                            "last_updated":"04-04-2022 10:15:00"
+                        },
+                        {
+                            "key":"sound_look_left",
+                            "value":"https://valify-deployment.s3.eu-central-1.amazonaws.com/sdk/active-liveness/valify_liveness_look_left_ar.mp3",
+                            "last_updated":"04-04-2022 10:15:00"
+                        },
+                        {
+                            "key":"sound_look_right",
+                            "value":"https://valify-deployment.s3.eu-central-1.amazonaws.com/sdk/active-liveness/valify_liveness_look_right_ar.mp3",
+                            "last_updated":"04-04-2022 10:15:00"
+                        },
+                        {
+                            "key":"sound_smile",
+                            "value":"https://valify-deployment.s3.eu-central-1.amazonaws.com/sdk/active-liveness/valify_liveness_smile_ar.mp3",
+                            "last_updated":"04-04-2022 10:15:00"
+                        },
+                        {
+                            "key":"sound_close_eyes",
+                            "value":"https://valify-deployment.s3.eu-central-1.amazonaws.com/sdk/active-liveness/valify_liveness_close_eyes_ar.mp3",
+                            "last_updated":"04-04-2022 10:15:00"
+                        }
+                    ]
+                }
+            ],
+            "terms":[
+                {
+                    "lang":"en",
+                    "value":"base64 for english liveness and facematch terms"
+                },
+                {
+                    "lang":"de",
+                    "value":"base64 for deutsch liveness and facematch terms"
+                }
+            ]
+        },
+        {
+            "id":"otp",
+            "name":"OTP",
+            "quota":5,
+            "specs":{
+                "timer":60,
+                "digits":6,
+                "countries":[
+                    {
+                        "country":"EG",
+                        "country_code":"+20",
+                        "phone_length":11,
+                        "otp_error_code":"eg_phone_number_validation"
+                    },
+                    {
+                        "country":"FR",
+                        "country_code":"+33",
+                        "phone_length":9,
+                        "otp_error_code":"fr_phone_number_validation"
+                    },
+                    {
+                        "country":"KSA",
+                        "country_code":"+966",
+                        "phone_length":9,
+                        "otp_error_code":"ksa_phone_number_validation"
+                    }
+                ],
+                "tutorial":[{
+                    "image":"asset_otp_tutorial_step1",
+                    "title":"title_otp_tutorial_step1",
+                    "desc":"desc_otp_tutorial_step1"
+                },{
+                    "image":"asset_otp_tutorial_step2",
+                    "title":"title_otp_tutorial_step2",
+                    "desc":"desc_otp_tutorial_step2"
+                }]
+            },
+            "strings":[
+                {
+                    "lang":"en",
+                    "direction":"ltr",
+                    "values":[
+                        {
+                            "key":"title_otp_tutorial_step1",
+                            "value":"Step 1"
+                        },
+                        {
+                            "key":"desc_otp_tutorial_step1",
+                            "value":"Clean your ID"
+                        },
+                        {
+                            "key":"title_otp_tutorial_step2",
+                            "value":"Step 2"
+                        },
+                        {
+                            "key":"desc_otp_tutorial_step2",
+                            "value":"Hands should not cover ID"
+                        },
+                        {
+                            "key":"resend_code",
+                            "value":"Didn't get a text? Resend code"
+                        },
+                        {
+                            "key":"enter_code",
+                            "value":"Enter the 6-digit code we sent to"
+                        },
+                        {
+                            "key":"send_otp",
+                            "value":"Send OTP"
+                        },
+                        {
+                            "key":"send_otp_message",
+                            "value":"We will send you an one time password on this mobile number"
+                        },
+                        {
+                            "key":"code_error",
+                            "value":"Code isn't correct"
+                        },
+                        {
+                            "key":"eg_phone_number_validation",
+                            "value":"Phone number should be 11 digits"
+                        },
+                        {
+                            "key":"fr_phone_number_validation",
+                            "value":"Phone number should be 9 digits"
+                        },
+                        {
+                            "key":"ksa_phone_number_validation",
+                            "value":"Phone number should be 9 digits"
+                        },
+                        {
+                            "key":"otp_validation",
+                            "value":"OTP code should be 6 digits"
+                        },
+                        {
+                            "key":"stay",
+                            "value":"Stay"
+                        },
+                        {
+                            "key":"retry",
+                            "value":"Retry"
+                        },
+                        {
+                            "key":"restart",
+                            "value":"Restart"
+                        },
+                        {
+                            "key":"ask_exit",
+                            "value":"Are you sure you want to exit?\nAll your data will be lost"
+                        },
+                        {
+                            "key":"exit_service",
+                            "value":"Exit service"
+                        },
+                        {
+                            "key":"dismiss",
+                            "value":"Dismiss"
+                        },
+                        {
+                            "key":"exit",
+                            "value":"Exit"
+                        }
+                    ]
+                }
+            ],
+            "assets":[
+                {
+                    "key":"asset_otp_tutorial_step1",
+                    "value":"https://valify-deployment.s3.eu-central-1.amazonaws.com/sdk/ocr/wm-gifs/Clean-ID.gif",
+                    "last_updated":"13-04-2022 13:30:00"
+                },
+                {
+                    "key":"asset_otp_tutorial_step2",
+                    "value":"https://valify-deployment.s3.eu-central-1.amazonaws.com/sdk/ocr/wm-gifs/No-Glares.gif",
+                    "last_updated":"13-04-2022 13:30:00"
+                }
+            ],
+            "sounds":[
+            ],
+            "terms":[
+                {
+                    "lang":"en",
+                    "value":"base64 for english otp terms"
+                },
+                {
+                    "lang":"de",
+                    "value":"base64 for deutsch otp terms"
+                }
+            ]
+        },
+        {
+                "id":"transliteration",
+                "name":"Transliteration",
+                "quota":5,
+                "specs":{
+                    "from_languages":[
+                        {
+                            "language":"ar",
+                            "title":"Arabic",
+                            "to_languages":[
+                                {
+                                    "language":"en",
+                                    "title":"English"
+                                }
+                            ]
+                            
+                        },
+                        {
+                            "language":"en",
+                            "title":"English",
+                            "to_languages":[
+                                {
+                                    "language":"ar",
+                                    "title":"Arabic"
+                                }
+                            ]
+                            
+                        }
+                    ],
+                    "validation_error":"value_validation_error",
+                    "tutorial":[{
+                        "image":"asset_transliteration_tutorial_step1",
+                        "title":"title_transliteration_tutorial_step1",
+                        "desc":"desc_transliteration_tutorial_step1"
+                    },{
+                        "image":"asset_transliteration_tutorial_step2",
+                        "title":"title_transliteration_tutorial_step2",
+                        "desc":"desc_transliteration_tutorial_step2"
+                    }]
+                },
+                "strings":[
+                    {
+                        "lang":"en",
+                        "direction":"ltr",
+                        "values":[
+                            {
+                                "key":"title_transliteration_tutorial_step1",
+                                "value":"Step 1"
+                            },
+                            {
+                                "key":"desc_transliteration_tutorial_step1",
+                                "value":"Clean your ID"
+                            },
+                            {
+                                "key":"title_transliteration_tutorial_step2",
+                                "value":"Step 2"
+                            },
+                            {
+                                "key":"desc_transliteration_tutorial_step2",
+                                "value":"Hands should not cover ID"
+                            },
+                            {
+                                "key":"transliterate_title",
+                                "value":"Transliterate a name"
+                            },
+                            {
+                                "key":"transliterate_from",
+                                "value":"From"
+                            },
+                            {
+                                "key":"transliterate_to",
+                                "value":"To"
+                            },
+                            {
+                                "key":"transliterate_button",
+                                "value":"Transliterate"
+                            },
+                            {
+                                "key":"value_validation_error",
+                                "value":"This field is required"
+                            },
+                            {
+                                "key":"retry",
+                                "value":"Retry"
+                            },
+                            {
+                                "key":"restart",
+                                "value":"Restart"
+                            },
+                            {
+                                "key":"ask_exit",
+                                "value":"Are you sure you want to exit?\nAll your data will be lost"
+                            },
+                            {
+                                "key":"exit_service",
+                                "value":"Exit service"
+                            },
+                            {
+                                "key":"dismiss",
+                                "value":"Dismiss"
+                            },
+                            {
+                                "key":"exit",
+                                "value":"Exit"
+                            }
+                        ]
+                    }
+                ],
+                "assets":[
+                    {
+                        "key":"asset_transliteration_tutorial_step1",
+                        "value":"https://valify-deployment.s3.eu-central-1.amazonaws.com/sdk/ocr/wm-gifs/Clean-ID.gif",
+                        "last_updated":"13-04-2022 13:30:00"
+                    },
+                    {
+                        "key":"asset_transliteration_tutorial_step2",
+                        "value":"https://valify-deployment.s3.eu-central-1.amazonaws.com/sdk/ocr/wm-gifs/No-Glares.gif",
+                        "last_updated":"13-04-2022 13:30:00"
+                    }
+                ],
+                "sounds":[
+                    
+                ],
+                "terms":[
+                    {
+                        "lang":"en",
+                        "value":"base64 for english transliteration terms"
+                    },
+                    {
+                        "lang":"de",
+                        "value":"base64 for deutsch transliteration terms"
+                    }
+                ]
+            }
+    ],
+    "colors":{
+        "primary_color":"#385CAD",
+        "secondary_color":"#F2F3F5",
+        "primary_text_color":"#000000",
+        "secondary_text_color":"#7E7E7E",
+        "button_text_color":"#FFFFFF",
+        "acceptance_color":"#62CBC9",
+        "error_color":"#EF7777",
+        "error_button_text_color":"#FFFFFF"
+    },
+    "logo":{
+            "valify_logo":"https://valify-deployment.s3.eu-central-1.amazonaws.com/sdk/ocr/assets/logo.png",
+            "client_logo":null
+        }
+}

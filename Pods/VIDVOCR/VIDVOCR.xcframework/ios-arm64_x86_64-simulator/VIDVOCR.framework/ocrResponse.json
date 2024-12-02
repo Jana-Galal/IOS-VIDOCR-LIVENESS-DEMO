@@ -1,0 +1,48 @@
+{
+    "result": [
+        {
+            "name": "area",
+            "label": "Area",
+            "value": "المقطم - القاهره",
+            "is_editable": true
+        },
+        {
+            "name": "first_name",
+            "label": "First Name",
+            "value": "هيتم",
+            "is_editable": false
+        },
+        {
+            "name": "front_nid",
+            "label": "Front National ID",
+            "value": "28306281300153",
+            "is_editable": false
+        },
+        {
+            "name": "full_name",
+            "label": "Full Name",
+            "value": "محمد عصام مختار موسى",
+            "is_editable": false
+        },
+        {
+            "name": "serial_number",
+            "label": "Serial Number",
+            "value": "HZ5385245",
+            "is_editable": false
+        },
+        {
+            "name": "street",
+            "label": "Street",
+            "value": "٩٢ مدينة عبادالرحمن",
+            "is_editable": true,
+        },
+        {
+            "name": "date_of_birth",
+            "label": "Birth Date",
+            "value": "1983/06/28",
+            "is_editable": false
+        }
+    ],
+    "transaction_id": "16449104504730",
+    "trials_remaining": 2
+}

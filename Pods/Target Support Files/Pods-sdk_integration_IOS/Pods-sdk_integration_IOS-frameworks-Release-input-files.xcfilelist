@@ -1,0 +1,4 @@
+${PODS_ROOT}/Target Support Files/Pods-sdk_integration_IOS/Pods-sdk_integration_IOS-frameworks.sh
+${BUILT_PRODUCTS_DIR}/Toast-Swift/Toast_Swift.framework
+${PODS_XCFRAMEWORKS_BUILD_DIR}/VIDVLiveness/VIDVLiveness.framework/VIDVLiveness
+${PODS_XCFRAMEWORKS_BUILD_DIR}/VIDVOCR/VIDVOCR.framework/VIDVOCR
