@@ -28,7 +28,7 @@ class sdkIntegration: UIViewController, VIDVOCRDelegate, VIDVLogsDelegate, Obser
     
     // Generate access token from API to connect to the SDK
     func generateAccessToken(completion: @escaping (String?, Error?) -> Void) {
-        let urlString = "https://valifystage.com/api/o/token/"
+        let urlString = "\(baseURL)/api/o/token/"
         guard let url = URL(string: urlString) else {
             completion(nil, NSError(domain: "Invalid URL", code: -1, userInfo: nil))
             return
